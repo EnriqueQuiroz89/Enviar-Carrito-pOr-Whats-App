@@ -25,80 +25,92 @@
 
 <body>
 
+    <div class="botones-navegacion">
+        <div class="link-pagina">
+            <a href="store.html">Visita tu tienda</a>
+        </div>
 
-    <div class="link-pagina">
-        <a href="store.html">Visita tu tienda</a>
+        <div class="link-pagina">
+            <a href="info-negocio.html">Info del Negocio</a>
+        </div>
+
+        <div class="elije-color">
+            <input id="inputColor" class="inputColor" type="color" name="inputColor" >
+        </div>
     </div>
 
-    <div class="link-pagina">
-        <a href="info-negocio.html">Info del Negocio</a>
-    </div>
+
 
 
 
     <div class="container">
-        <h2>Formulario Principal</h2>
-        <form id="form" class="form" autocomplete="off">
-            <div class="form-control">
-                <input type="text" id="articulo" placeholder="Nombre del Producto">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
-            </div>
+        <h2 id="titulo">Formulario Principal</h2>
 
-            <div class="form-control">
-                <input type="text" id="descripcion" placeholder="Describe tu Producto">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
-            </div>
+        <section id="formulario">
 
-            <div class="form-control">
-                <input type="number" id="precio" placeholder="Precio del producto">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
-            </div>
-
-            <div class="imagen-form-control">
-
-                <input type="text" id="imagen" placeholder="URL Imagen" style="display:none">
-
-                <!--Campo oculto tipo FILE para elegir la imagen-->
-                <!--MULTIPLE  <input type="file" id="fileElem" multiple accept="image/*" style="display:none"
-                onchange="handleFiles(this.files)">  -->
-
-                <!--SINGULAR  <input type="file" id="fileElem" accept="image/*" style="display:none"
-                         onchange="handleFiles(this.files)"> -->
-
-                <input type="file" id="fileElem" accept="image/*" style="display:none"
-                    onchange="manejarFiles(this.files)">
-
-                <!--Link para detonar la el cuadro de seleccion del input tipo file-->
-                <a href="#" id="fileSelect" class="file-select">Elige una imagen</a>
-                <!--Aqui se muestra el Progreso de la carga-->
-                <div class="progress-bar" id="progress-bar">
-                    <div class="progress" id="progress">
-                        <div id="porcentaje">0%</div>
-                    </div>
+            <form id="form" class="form" autocomplete="off">
+                <div class="form-control">
+                    <input type="text" id="articulo" placeholder="Nombre del Producto">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
 
-                <!--Aqui se mostrara un icono de la imagen subida-->
-                <div id="gallery" class="gallery"></div>
+                <div class="form-control">
+                    <input type="text" id="descripcion" placeholder="Describe tu Producto">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
 
-            </div>
+                <div class="form-control">
+                    <input type="number" id="precio" placeholder="Precio del producto">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <div class="imagen-form-control">
+
+                    <input type="text" id="imagen" placeholder="URL Imagen" style="display:none">
+
+                    <!--Campo oculto tipo FILE para elegir la imagen-->
+                    <!--MULTIPLE  <input type="file" id="fileElem" multiple accept="image/*" style="display:none"
+                onchange="handleFiles(this.files)">  -->
+
+                    <!--SINGULAR  <input type="file" id="fileElem" accept="image/*" style="display:none"
+                         onchange="handleFiles(this.files)"> -->
+
+                    <input type="file" id="fileElem" accept="image/*" style="display:none"
+                        onchange="manejarFiles(this.files)">
+
+                    <!--Link para detonar la el cuadro de seleccion del input tipo file-->
+                    <a href="#" id="fileSelect" class="file-select">Elige una imagen</a>
+                    <!--Aqui se muestra el Progreso de la carga-->
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress" id="progress">
+                            <div id="porcentaje">0%</div>
+                        </div>
+                    </div>
+
+                    <!--Aqui se mostrara un icono de la imagen subida-->
+                    <div id="gallery" class="gallery"></div>
+
+                </div>
 
 
-            <!--Seccion de los botones-->
-            <!--Ocultar en esta version
+                <!--Seccion de los botones-->
+                <!--Ocultar en esta version
             <button class="btn btn-info my-5" id="boton" onclick="guardarOrCancelar()">Agregar a la lista</button>
             -->
-            <button class="btn btn-info my-5" id="guardar-edicion" style="display:none">Guardar Edicion</button>
-            <div class="button-control">
-                <button id="boton" class="enviar">Agregar a la lista</button>
-            </div>
+                <button class="btn btn-info my-5" id="guardar-edicion" style="display:none">Guardar Edicion</button>
+                <div class="button-control">
+                    <button id="boton" class="enviar">Agregar a la lista</button>
+                </div>
 
-        </form>
+            </form>
+
+        </section>
 
         <h2>Tabla de Articulos</h2>
         <table class="table">

@@ -42,6 +42,11 @@ const form = document.getElementById('form'),
 /**Imagen por default en el fomulario */
 const urlImagenDefault = 'https://res.cloudinary.com/muchosregistros/image/upload/w_100,c_scale/v1645734002/vcgsorn2397ptsd71pjg.png';
 
+/// Configuracion del fondo de la pagina
+const color =document.querySelector("#inputColor");
+color.addEventListener("change", (e)=> {
+    document.body.style.backgroundColor = e.target.value;
+})
 
 // Initialize Cloud Firestore through Firebase
 firebase.initializeApp({
@@ -516,7 +521,8 @@ function editar(id, articulo, cantidad, nota, imagen) {
     btnGuardarEdicion.style.display = 'unset';
     //**Lleva la vista al formulario */
     // Uso constante form
-    moverseA(form.id);
+    //moverseA(form.id);
+    moverseAlTitulo();
 
     // Crea una funcion anonima para ejecutar cuando se haga click
     btnGuardarEdicion.onclick = function () {
@@ -555,6 +561,10 @@ function editar(id, articulo, cantidad, nota, imagen) {
 function moverseA(idElemento) {
     location.hash = "#" + idElemento;
     console.log(idElemento);
+}
+
+function moverseAlTitulo() {
+    location.hash = "#formulario";
 }
 
 function resetFormulario() {

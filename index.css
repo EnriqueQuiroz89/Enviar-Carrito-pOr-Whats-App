@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
 
-*{box-sizing:  border-box;}
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 h2 {
     text-align: center;
@@ -23,30 +29,44 @@ h2 {
     margin: 3px;
 }
 
+.botones-navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.progress-bar{
+.inputColor {
+    width: 100px;
+    height: 50px;
+}
+
+.elije-color {
+    margin: 10px;
+}
+
+.progress-bar {
     width: 100%;
     position: relative;
     height: 20px;
     margin-top: 4px;
     margin-bottom: 10px;
     background: transparent;
-    border:  1px solid black;
+    border: 1px solid black;
     border-radius: 5%;
-  }
+}
 
-.progress-bar .progress{
+.progress-bar .progress {
     height: 15px;
     background-color: yellow;
     width: 0;
     border-radius: 5%;
 
-  }
+}
 
 .form {
     padding: 5px 5px;
-   max-width: 600px;
-   margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /**Boton File Select*/
@@ -58,8 +78,9 @@ h2 {
     border-radius: 5px;
     text-decoration: none;
     width: 30%;
-    text-align: center;    
+    text-align: center;
 }
+
 .file-select:hover {
     background: white;
     color: blue;
@@ -88,7 +109,7 @@ h2 {
 }
 
 .form-control input {
-    border: 2px solid black ;
+    border: 2px solid black;
     border-radius: 4px;
     display: block;
     width: 100%;
@@ -108,6 +129,7 @@ h2 {
 .form-control.success input {
     border-color: limegreen;
 }
+
 .form-control.success i.fa-check-circle {
     visibility: visible;
     color: limegreen;
@@ -127,12 +149,14 @@ h2 {
 
 /*Error*/
 .form-control.error input {
-    border-color: red;    
+    border-color: red;
 }
+
 .form-control.error i.fa-exclamation-circle {
     visibility: visible;
     color: red;
 }
+
 .form-control.error small {
     color: red;
     visibility: visible;
@@ -140,19 +164,21 @@ h2 {
 
 /*Por inicial*/
 .form-control.inicial input {
-    border: 2px solid black ;
+    border: 2px solid black;
     border-radius: 4px;
     display: block;
     width: 100%;
     padding: 10px;
-    font-family: inherit;  
+    font-family: inherit;
 }
+
 .form-control.inicial i.fa-check-circle {
     position: absolute;
     top: 40px;
     right: 10px;
     visibility: hidden;
 }
+
 .form-control.inicial small {
     visibility: hidden;
     position: absolute;
@@ -171,14 +197,14 @@ h2 {
 
 .form-control i {
     position: absolute;
-    top:40px;
+    top: 40px;
     right: 10px;
 }
 
 .form button {
-    background-color: navy ;
+    background-color: navy;
     color: white;
-    border:  2px solid white;
+    border: 2px solid white;
     border-radius: 4px;
     display: block;
     font-size: 16px;
@@ -188,9 +214,9 @@ h2 {
 }
 
 .activo .enviar {
-    background-color: limegreen ;
+    background-color: limegreen;
     color: white;
-    border:  2px solid white;
+    border: 2px solid white;
     border-radius: 4px;
     display: block;
     font-size: 16px;
@@ -200,9 +226,9 @@ h2 {
 }
 
 .inactivo .enviar {
-    background-color: silver ;
+    background-color: silver;
     color: white;
-    border:  2px solid white;
+    border: 2px solid white;
     border-radius: 4px;
     display: block;
     font-size: 16px;
@@ -216,17 +242,17 @@ h2 {
     margin: 0 auto;
     background: white;
     width: 100%;
-    color: white ;
+    color: white;
     max-width: 600px;
 }
 
 .table thead {
-    color: silver ;
+    color: silver;
     font-size: large;
 }
 
 .table tr {
-    background: steelblue;    
+    background: steelblue;
 }
 
 .table td {
@@ -237,8 +263,8 @@ h2 {
 }
 
 .flex-container {
-  display: flex;
-  justify-content: space-between;
-  background: palegreen;
-  width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    background: palegreen;
+    width: 80vw;
 }
